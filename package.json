@@ -1,0 +1,33 @@
+{
+  "name": "blocks-for-change-lite",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Guli <ignaciomorenopubul@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.6",
+    "@fortawesome/free-brands-svg-icons": "^5.4.1",
+    "@fortawesome/free-regular-svg-icons": "^5.4.1",
+    "@fortawesome/free-solid-svg-icons": "^5.4.1",
+    "@fortawesome/vue-fontawesome": "^0.1.1",
+    "aos": "^3.0.0-beta.6",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.2.3",
+    "nuxt-fontawesome": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

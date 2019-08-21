@@ -24,6 +24,13 @@
   export default {
     methods: {
       startMiner: function () {
+        this.$buefy.snackbar.open({
+            message: 'This project was released in the early stages of JavaScript mining. Unfortunately, this practice has been banned by most antiviruses and browsers due to other projects using it unfairly. This is now for demo purposes only.',
+            type: 'is-warning',
+            position: 'is-top-right',
+            actionText: 'OK',
+            indefinite: true
+        })
         this.$store.dispatch('startMiner')
       }
     } 

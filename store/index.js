@@ -10,34 +10,36 @@ const createStore = () => {
     }),
     mutations: {
       PAUSE_MINER (state) {
-        state.miner.stop()
+        // state.miner.stop()
         state.isMining = false
         console.log('Miner stopped')
       },
       START_MINER (state) {
-        if (!state.miner) {
-          try {
-            state.miner = new CoinHive.Anonymous('fHSt65FRrG5fpLG3bmHxhEqQpGNnHi2M', {throttle: 0.8})
-          } catch (e) {
-            alert('Ooops. Looks like your firewall or anti-virus is blocking our miner. Get in touch to learn how to solve this issue.')
-          }
-        }
-        state.miner.start(CoinHive.FORCE_EXCLUSIVE_TAB)
-        state.miner.on('open', function(params) {
-          state.isMining = true
-          state.minerStarted = true
-          console.log('Miner started')
-        });
+        // if (!state.miner) {
+        //   try {
+        //     state.miner = new CoinHive.Anonymous('fHSt65FRrG5fpLG3bmHxhEqQpGNnHi2M', {throttle: 0.8})
+        //   } catch (e) {
+        //     alert('Ooops. Looks like your firewall or anti-virus is blocking our miner. Get in touch to learn how to solve this issue.')
+        //   }
+        // }
+        // state.miner.start(CoinHive.FORCE_EXCLUSIVE_TAB)
+        // state.miner.on('open', function(params) {
+        //   state.isMining = true
+        //   state.minerStarted = true
+        //   console.log('Miner started')
+        // });
+        state.isMining = true
+        state.minerStarted = true
       },
       TURN_ON_HIGH_POWER_MODE (state) {
         state.isHighPowerMode = true
-        state.miner.setThrottle(0.5)
-        console.log(state.isHighPowerMode)
+        // state.miner.setThrottle(0.5)
+        // console.log(state.isHighPowerMode)
       },
       TURN_OFF_HIGH_POWER_MODE (state) {
         state.isHighPowerMode = false
-        state.miner.setThrottle(0.8)
-        console.log(state.isHighPowerMode)
+        // state.miner.setThrottle(0.8)
+        // console.log(state.isHighPowerMode)
       }
     },
     actions: {

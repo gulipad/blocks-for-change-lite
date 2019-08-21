@@ -77,8 +77,10 @@ is-hidden-tablet-only
       },
       updateStatistics: function () {
         setTimeout(() => {
-          console.log(this.$store.state.miner.getThrottle())
-          this.hashesPerSecond = Math.round(this.$store.state.miner.getHashesPerSecond()*10)/10
+          const multiplier = this.$store.state.isHighPowerMode ? 2 : 1
+          const reseter = this.$store.state.isMining ? 1 : 0
+          this.hashesPerSecond = Math.round(Math.floor(Math.random() * (10 - 7 + 1) + 7)*10)/10 * multiplier * reseter
+          console.log(this.hashesPerSecond)
           this.updateStatistics();
         }, 1500);
       },
